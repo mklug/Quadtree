@@ -9,6 +9,30 @@ class Node:
 
 
 class Quadtree:
+    '''
+    Quadtree for efficient querying of 2-dimensional points.
+
+    Methods:
+    add(x,y)
+    search(x,y)
+    query_range(min_x,max_x,
+                min_y,max_y)
+
+    Example usage:
+    >>> qt = Quadtree()
+    >>> qt.add(1,2)
+    True
+    >>> qt.add(3,4)
+    True
+    >>> qt.add(1,2)
+    False
+    >>> qt.search(1,2)
+    True
+    >>> qt.search(1,0)
+    False
+    >> qt.query_range(-10,10,-10,10)
+    [(1,2), (3,4)]
+    '''
 
     # Convention for dealing with ties.
     # (-1, 0) means that the new point has smaller
